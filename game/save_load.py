@@ -43,8 +43,8 @@ class SaveLoad:
         player.id = data['id']
         player.stats = data['stats']
         # Assume we have a global skills dictionary
-        from game.skills import skills
-        player.skills = [skills[skill_name] for skill_name in data['skills']]
+        
+        player.skills = [skills[skill_name]]
         player.status_effects = data['status_effects']
         print(f"Game loaded from {filename}")
         return player
